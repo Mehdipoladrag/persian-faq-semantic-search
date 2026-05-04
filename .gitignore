@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.env
+.venv
+venv/
+ENV/
+env/
+dist/
+build/
+*.egg-info/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+migrations/
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# RAG Project
+qdrant_storage/
+chroma_db/
+vectordb/
+data/
+!data/.gitkeep
+models/
+*.rar
+*.zip
+*.tar.gz
+*.7z
+*.tmp
+*.bak
+*.backup
+
+# Logs
+logs/
+*.log
+log/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Streamlit
+.streamlit/secrets.toml
+
+# LM Studio / Large files
+*.gguf
+*.bin
+*.pth
+*.pt
+*.onnx
+*.h5
+*.pb
+
+# GPU Cache
+__pycache__/cuda*
+.cache/

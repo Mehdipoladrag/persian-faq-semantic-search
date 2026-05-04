@@ -1,0 +1,30 @@
+embedding:
+  model_name: "C:/Users/Mehdi/.cache/huggingface/hub/models--sentence-transformers--paraphrase-multilingual-MiniLM-L12-v2/snapshots/e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+  device: "cuda" 
+
+chunking:
+  chunk_size: 2000
+  chunk_overlap: 0
+  separators: ["\n\n", "\n"]
+
+vector_db:
+  path: "./storage"
+  collection_name: "rag_docs"
+  distance: "Cosine"
+
+retrieval:
+  top_k: 4
+  score_threshold: 0.0
+
+llm:
+  base_url: "http://localhost:1234/v1"
+  api_key: "not-needed"
+  model_name: "local-model"
+  temperature: 0.2
+  max_tokens: 512
+
+chat:
+  system_prompt: |
+    شما یک دستیار هوشمند و مفید هستید که به سوالات کاربر بر اساس اطلاعات داده شده پاسخ می‌دهید.
+    اگر پاسخ در متن موجود نبود، صادقانه بگویید: «اطلاعاتی در این مورد ندارم».
+    پاسخ خود را روان، کوتاه و مفید ارائه دهید.
