@@ -57,7 +57,7 @@ class RAGChain:
 
 سوال: {query}
 
-پاسخ را فقط بر اساس اطلاعات بالا بده. اگر پاسخ در اطلاعات نبود، بگو «اطلاعاتی ندارم»."""
+پاسخ را فقط بر اساس اطلاعات بالا بده. اگر پاسخ در اطلاعات نبود، بگو اطلاعات کافی ندارم»."""
 
         messages = [
             {"role": "system", "content": self.system_prompt},
@@ -76,15 +76,7 @@ class RAGChain:
             logger.error(f"LLM call failed: {error}")
             answer = "خطا در ارتباط با مدل. لطفاً LM Studio را بررسی کنید."
 
-        sources = list(
-            set(
-                [
-                    doc["metadata"].get("source", "unknown")
-                    for doc in retrieved_docs
-                    if "source" in doc["metadata"]
-                ]
-            )
-        )
+        sources = ["پایگاه دانش صندوق نوآوری و شکوفایی"] if retrieved_docs else []
 
         return {
             "answer": answer,
